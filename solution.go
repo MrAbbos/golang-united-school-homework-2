@@ -13,18 +13,18 @@ import "math"
 type customeInt int
 
 const (
-	SidesTriangle = 0
+	SidesCircle   = 0
 	SidesTriangle = 3
 	SidesSquare   = 4
 )
 
 func CalcSquare(sideLen float64, sidesNum customeInt) float64 {
 	var result float64
-	if sidesNum == 3 {
+	if sidesNum == SidesTriangle {
 		result = (math.Sqrt(3) * sideLen * sideLen) / 4
-	} else if sidesNum == 4 {
+	} else if sidesNum == SidesSquare {
 		result = sideLen * sideLen
-	} else if sidesNum == 0 {
+	} else if sidesNum == SidesCircle {
 		result = math.Pi * sideLen * sideLen
 	}
 	return result
