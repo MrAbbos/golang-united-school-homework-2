@@ -12,6 +12,12 @@ import "math"
 
 type customeInt int
 
+const (
+	SidesTriangle = 0
+	SidesTriangle = 3
+	SidesSquare   = 4
+)
+
 func CalcSquare(sideLen float64, sidesNum customeInt) float64 {
 	var result float64
 	if sidesNum == 3 {
